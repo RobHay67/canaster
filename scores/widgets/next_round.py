@@ -25,3 +25,27 @@ def update_total_scores(scope):
 	scope.round_score_player_2 = 0
 	scope.round_score_player_3 = 0
 	scope_player_round_components(scope)
+	check_for_winner(scope)
+
+
+def check_for_winner(scope):
+	high_scores = []
+
+	for player_no in [1,2,3]:
+		high_scores.append(scope['score_total_player_' + str(player_no)])
+
+	highest = max(high_scores)
+
+	st.write('Current High Score = ', highest)
+
+	# find who has the highest score
+	if highest >= 5000:
+		for player_no in [1,2,3]:
+			if highest == scope['score_total_player_' + str(player_no)]:
+				winner = player_no
+				st.write('This player is the leader', player_no)
+		# scope.player_1
+		winner_name = scope['player_' + str(winner)]
+		st.title(winner_name + ' is the winner')
+		st.balloons()
+
