@@ -3,12 +3,10 @@
 
 import streamlit as st
 
-from scope import scope_init
-from sidebar import render_sidebar
-from players import render_player_config
-from score import render_scoring
-
-
+from app.scope import scope_init
+from app.sidebar import render_sidebar
+from players.players import render_player_config
+from scores.controller import render_scoring
 
 
 if 'initialised' not in st.session_state:
@@ -30,8 +28,10 @@ print('='*66)
 print('Total Keys in Scope = ', len(scope))
 st.divider()
 for count, key in enumerate(sorted(st.session_state)):
-	print(count+1, key)
+	print(count+1, key, st.session_state[key])
 	st.write(count+1, key, st.session_state[key])
 print('='*66)
+
+
 
 
