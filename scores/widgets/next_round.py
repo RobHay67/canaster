@@ -7,7 +7,7 @@ def next_round_button(scope):
 
 	widget_key = 'widget_' + 'next_round_button'
 	button = st.button(
-						label='Next Round (apply scores)',
+						label='Next Round (apply scores > )',
 						type='primary',
 						on_click=update_total_scores, 
 						args=(scope, ),
@@ -17,6 +17,7 @@ def next_round_button(scope):
 
 
 def update_total_scores(scope):
+	scope.round_number += 1
 	scope.score_total_player_1 += scope.round_score_player_1
 	scope.score_total_player_2 += scope.round_score_player_2
 	scope.score_total_player_3 += scope.round_score_player_3

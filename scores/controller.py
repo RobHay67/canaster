@@ -15,9 +15,7 @@ def render_scoring(scope):
 		with col1:build_column(scope, scope.player_1, 1)
 		with col2:build_column(scope, scope.player_2, 2)
 		with col3:build_column(scope, scope.player_3, 3)
-		
-	next_round_button(scope)
-		
+				
 
 
 
