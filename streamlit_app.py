@@ -24,13 +24,13 @@ if scope.show_scoring == True:
 
 
 
-print('='*66)
-print('Total Keys in Scope = ', len(scope))
-st.divider()
-for count, key in enumerate(sorted(st.session_state)):
-	print(count+1, key, st.session_state[key])
-	st.write(count+1, key, st.session_state[key])
-print('='*66)
+# print('='*66)
+# print('Total Keys in Scope = ', len(scope))
+# st.divider()
+# for count, key in enumerate(sorted(st.session_state)):
+# 	print(count+1, key, st.session_state[key])
+# 	st.write(count+1, key, st.session_state[key])
+# print('='*66)
 
 
 

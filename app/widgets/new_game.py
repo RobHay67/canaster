@@ -17,10 +17,6 @@ def new_game_button(scope):
 	return button
 
 def reset_game(scope):
-	st.write('reset the game here - ToDo - need checking to do this')
 	scope_round_scores(scope)
 	scope_player_round_components(scope)
 
-
-
-# new_game = st.button("New Game", key="widget_new_game")

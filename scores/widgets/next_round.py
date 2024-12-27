@@ -36,14 +36,11 @@ def check_for_winner(scope):
 
 	highest = max(high_scores)
 
-	st.write('Current High Score = ', highest)
-
 	# find who has the highest score
 	if highest >= 5000:
 		for player_no in [1,2,3]:
 			if highest == scope['score_total_player_' + str(player_no)]:
 				winner = player_no
-				st.write('This player is the leader', player_no)
 		# scope.player_1
 		winner_name = scope['player_' + str(winner)]
 		st.title(winner_name + ' is the winner')
