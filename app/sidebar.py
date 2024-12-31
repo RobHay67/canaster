@@ -9,7 +9,7 @@ from scores.widgets.next_round import next_round_button
 def render_sidebar(scope):
 	with st.sidebar:
 		st.title("Canaster Scorer")
-		st.caption('version == 0.2')
+		st.caption('version == 0.3')
 
 		render_show_players_button(scope)
 		st.divider()

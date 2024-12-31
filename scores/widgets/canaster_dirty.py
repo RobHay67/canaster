@@ -8,7 +8,7 @@ def canaster_dirty_number_input(scope, player_no):
 
 	number_input = st.number_input(
 								label = "Un-Natural Canaster", 
-								value=scope['player_' + str(player_no) + '_canaster_dirty'], 
+								value=int(scope['player_' + str(player_no) + '_canaster_dirty']), 
 								min_value=0, 
 								max_value=22,
 								on_change=change_canaster_dirty, 

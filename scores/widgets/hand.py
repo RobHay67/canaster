@@ -18,10 +18,10 @@ def hand_slider_input(scope, player_no):
 
 def hand_number_input(scope, player_no):
 	widget_key = 'widget_' + 'hand_' + str(player_no) 
-
+	st.write(scope['player_' + str(player_no) + '_hand'])
 	number_input = st.number_input(
 								label = "Points in Hand (negative)", 
-								value=scope['player_' + str(player_no) + '_hand'], 
+								value=int(scope['player_' + str(player_no) + '_hand']), 
 								min_value=0, 
 								max_value=1000,
 								step=5,

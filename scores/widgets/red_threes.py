@@ -6,7 +6,7 @@ def red_threes_number_input(scope, player_no):
 
 	number_input = st.number_input(
 								label = "Red Threes", 
-								value=scope['player_' + str(player_no) + '_red_threes'], 
+								value=int(scope['player_' + str(player_no) + '_red_threes']), 
 								min_value=0, 
 								max_value=4,
 								on_change=change_red_threes, 
