@@ -29,7 +29,6 @@ def build_column(scope, player_name, player_no):
 	# Score for this round
 	round_number = str(scope.round_number)
 	round_score = str(scope['round_score_player_' + str(player_no)])
-	# st.subheader('round ' + round_number + ' score = ' + round_score)
 	st.subheader(round_score)
 
 
