@@ -37,7 +37,7 @@ def points_down_score(total_score):
 	points_down = 0
 
 	if total_score <  	0 	 : points_down = 0
-	if total_score > 0 and total_score <= 1500 : 
+	if total_score >= 0 and total_score < 1500 : 
 		points_down = 50
 	if total_score >= 1500 and total_score < 3000: 
 		points_down = 90
