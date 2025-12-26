@@ -1,7 +1,7 @@
 import streamlit as st
 
-from app.scope import scope_player_round_components
-from app.scope import scope_round_scores
+from scope import scope_player_round_components
+from scope import scope_round_scores
 
 
 def new_game_button(scope):

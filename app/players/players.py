@@ -15,25 +15,35 @@ def render_player_config(scope):
 
 	if scope.players_qty == '2 Players':
 		scope.players_qty = 2
-		with col1 : scope.player_1 = st.text_input("Name of Player 1", scope.player_1 )
-		with col2 : scope.player_2 = st.text_input("Name of Player 1", scope.player_2)
+		with col1 : 
+			scope.player_1 = st.text_input("Name of Player 1", scope.player_1 )
+		with col2 : 
+			scope.player_2 = st.text_input("Name of Player 1", scope.player_2)
 	
 	if scope.players_qty == '3 Players':
 		scope.players_qty = 3
-		with col1 : scope.player_1 = st.text_input("Name of Player 1", scope.player_1 )
-		with col2 : scope.player_2 = st.text_input("Name of Player 2", scope.player_2)
-		with col3 : scope.player_3 = st.text_input("Name of Player 3", scope.player_3, placeholder='this')
+		with col1 : 
+			scope.player_1 = st.text_input("Name of Player 1", scope.player_1 )
+		with col2 : 
+			scope.player_2 = st.text_input("Name of Player 2", scope.player_2)
+		with col3 : 
+			scope.player_3 = st.text_input("Name of Player 3", scope.player_3, placeholder='this')
 	
 	if scope.players_qty == '2 Teams':
 		scope.no_of_teams = 2
-		with col1 : scope.player_1 = st.text_input("Name of Team 1", scope.player_1)
-		with col2 : scope.player_2 = st.text_input("Name of Team 2", scope.player_2)
+		with col1 : 
+			scope.player_1 = st.text_input("Name of Team 1", scope.player_1)
+		with col2 : 
+			scope.player_2 = st.text_input("Name of Team 2", scope.player_2)
 
 	if scope.players_qty == '3 Teams':
 		scope.no_of_teams = 3
-		with col1 : scope.player_1 = st.text_input("Name of Team 1", scope.player_1)
-		with col2 : scope.player_2 = st.text_input("Name of Team 2", scope.player_2)
-		with col3 : scope.player_3 = st.text_input("Name of Team 3", scope.player_3)
+		with col1 : 
+			scope.player_1 = st.text_input("Name of Team 1", scope.player_1)
+		with col2 : 
+			scope.player_2 = st.text_input("Name of Team 2", scope.player_2)
+		with col3 : 
+			scope.player_3 = st.text_input("Name of Team 3", scope.player_3)
 
 	render_start_game_button(scope)
 

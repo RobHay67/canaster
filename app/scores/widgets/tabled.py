@@ -21,7 +21,7 @@ def tabled_slider_input(scope, player_no):
 def tabled_number_input(scope, player_no):
 	widget_key = 'widget_' + 'tabled_' + str(player_no) 
 	number_input = st.number_input(
-								label = "Points in Hand (negative)", 
+								label = "Points Tabled (positive)", 
 								value=int(scope['player_' + str(player_no) + '_tabled']), 
 								min_value=0, 
 								max_value=10000,

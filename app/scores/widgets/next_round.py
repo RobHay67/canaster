@@ -1,6 +1,6 @@
 import streamlit as st
 
-from app.scope import scope_player_round_components
+from scope import scope_player_round_components
 
 
 def next_round_button(scope):

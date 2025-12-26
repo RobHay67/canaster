@@ -19,8 +19,8 @@ def auto_update_out_status(scope, player_no):
 	previous_out_status = scope['player_' + str(player_no) + '_gone_out']
 	new_concealed_status = scope['widget_' + 'gone_out_concealed_' + str(player_no)]
 
-	if new_concealed_status == True:
-		if previous_out_status == False:
+	if new_concealed_status is True:
+		if previous_out_status is False:
 			scope['player_' + str(player_no) + '_gone_out'] = True
 			scope['round_score_player_' + str(player_no)] += 100
 			
@@ -34,24 +34,27 @@ def update_gone_out(scope, player_no):
 	new_status = scope['widget_' + 'gone_out_concealed_' + str(player_no)]
 	
 	if player_no == 1: # we are updating player 1
-		if scope.player_1_concealed  == False : 
+		if scope.player_1_concealed is False : 
 			scope.round_score_player_1 += 100
 			auto_update_out_status(scope, 1)
-		else : scope.round_score_player_1 += -100
+		else :
+			scope.round_score_player_1 += -100
 		set_other_player_out_status_to_false(scope, 2)
 		set_other_player_out_status_to_false(scope, 3)
 	if player_no == 2:
-		if scope.player_2_concealed  == False : 
+		if scope.player_2_concealed is False : 
 			scope.round_score_player_2 += 100
 			auto_update_out_status(scope, 2)
-		else : scope.round_score_player_2 += -100
+		else : 
+			scope.round_score_player_2 += -100
 		set_other_player_out_status_to_false(scope, 1)
 		set_other_player_out_status_to_false(scope, 3)
 	if player_no == 3:
-		if scope.player_3_concealed  == False : 
+		if scope.player_3_concealed is False : 
 			scope.round_score_player_3 += 100
 			auto_update_out_status(scope, 3)
-		else : scope.round_score_player_3 += -100
+		else : 
+			scope.round_score_player_3 += -100
 		set_other_player_out_status_to_false(scope, 1)
 		set_other_player_out_status_to_false(scope, 2)
 

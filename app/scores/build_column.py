@@ -14,7 +14,7 @@ def build_column(scope, player_name, player_no):
 	total_score = scope['score_total_player_' + str(player_no)]
 	st.subheader(player_name + '   ( ' + str(total_score) + ' )')
 
-	st.write('points down = ', points_down_score(total_score) )
+	st.write('points down = ' + str(points_down_score(total_score)) )
 	st.write('')
 
 	# Render Score Widgets
@@ -36,7 +36,8 @@ def points_down_score(total_score):
 
 	points_down = 0
 
-	if total_score <  	0 	 : points_down = 0
+	if total_score <  	0 	 : 
+		points_down = 0
 	if total_score >= 0 and total_score < 1500 : 
 		points_down = 50
 	if total_score >= 1500 and total_score < 3000: 

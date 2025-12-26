@@ -1,9 +1,9 @@
 import streamlit as st
 
-from app.widgets.players import render_show_players_button
-from app.widgets.scoreboard import render_scoreboard_heading
-from app.widgets.scoreboard import render_scoreboard
-from app.widgets.new_game import new_game_button
+from widgets.players import render_show_players_button
+from widgets.scoreboard import render_scoreboard_heading
+from widgets.scoreboard import render_scoreboard
+from widgets.new_game import new_game_button
 from scores.widgets.next_round import next_round_button
 
 def render_sidebar(scope):

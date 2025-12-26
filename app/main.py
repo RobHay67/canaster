@@ -1,10 +1,20 @@
 ## pipenv shell
 ## streamlit run streamlit_app.py
 
+
+# -------------------------------------------------------
+# 	uv run streamlit run app/main.py
+# 	source .venv/bin/activate
+# -------------------------------------------------------
+
+
+
+
+
 import streamlit as st
 
-from app.scope import scope_init
-from app.sidebar import render_sidebar
+from scope import scope_init
+from sidebar import render_sidebar
 from players.players import render_player_config
 from scores.controller import render_scoring
 
@@ -16,10 +26,10 @@ else:
 
 render_sidebar(scope)
 
-if scope.show_players == True: 
+if scope.show_players is True: 
 	render_player_config(scope)
 
-if scope.show_scoring == True:
+if scope.show_scoring is True:
 	render_scoring(scope)
 
 
